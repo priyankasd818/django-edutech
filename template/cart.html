@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            margin: 0 15px;
+            color: #007bff;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .total {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Shopping Cart</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/courses">Courses</a>
+        <a href="/cart">Cart</a>
+        <a href="/contact">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <h2>Items in Your Cart</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Python for Beginners</td>
+                    <td>$50.00</td>
+                    <td>
+                        <input type="number" value="1" min="1">
+                    </td>
+                    <td>$50.00</td>
+                    <td>
+                        <button class="btn">Remove</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Web Development Bootcamp</td>
+                    <td>$75.00</td>
+                    <td>
+                        <input type="number" value="1" min="1">
+                    </td>
+                    <td>$75.00</td>
+                    <td>
+                        <button class="btn">Remove</button>
+                    </td>
+                </tr>
+                <!-- Add more items as needed -->
+            </tbody>
+        </table>
+        <div class="total">
+            <p>Total: $125.00</p>
+            <a href="/checkout" class="btn">Proceed to Checkout</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Edutech. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
